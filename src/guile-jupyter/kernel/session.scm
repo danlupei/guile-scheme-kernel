@@ -6,7 +6,8 @@
   (let ((env (session-env session)))
     (environment-define env 'session session)))
 
-(define session-ref (association-procedure string=? session-id))
+;(define session-ref (association-procedure string=? session-id)) -- *sigh*
+(define session-ref (assv session-id))
 
 (define (initialize-env! env)
   (load "runtime.scm" env))

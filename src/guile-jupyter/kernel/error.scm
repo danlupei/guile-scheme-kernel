@@ -3,7 +3,7 @@
 		  (condition-type/name (condition/type condition))
 		  (condition/report-string condition)))
 
-(define ((effector kappa session) name report )
+(define (effector kappa session name report )
   (error-result session name report )
   (kappa "error"))
 

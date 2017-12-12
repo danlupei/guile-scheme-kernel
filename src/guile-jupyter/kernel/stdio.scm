@@ -16,11 +16,11 @@
      (text . ,(substring string start end))))
   0)
 
-(define stdio-port-type
-  (make-port-type
-   `((write-substring ,stdio-write-substring)
-     (write-char ,stdio-write-char))
-   #f))
+;(define stdio-port-type ; I don't know how to port it to Guile...
+;  (make-port-type
+;   `((write-substring ,stdio-write-substring)
+;     (write-char ,stdio-write-char))
+;   #f))
 
-(define (make-stdio session)
-  (make-port stdio-port-type session))
+;(define (make-stdio session)
+;  (make-port stdio-port-type session))

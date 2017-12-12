@@ -12,7 +12,8 @@
   (let ((target (asss target-name comm-targets)))
     (or target (error "invalid comm target" target-name))))
 
-(define comm-ref (association-procedure string=? comm-id))
+;(define comm-ref (association-procedure string=? comm-id)) -- *sigh*
+(define comm-ref (assv comm-id))
 
 (define (comm-info-request session content reply pub . env)
   (pub "comm_info_reply" '((status . "ok") (comms))))

@@ -1,8 +1,9 @@
 (define version "5.1.0")
 
-(define asss (association-procedure string=? car))
+; (define asss (association-procedure string=? car)) - guile doesn't have asss...
+(define asss assv)
 
-(define ((8b-ref string) k)
+(define (8b-ref string k)
   (vector-8b-ref string k))
 
 (define (vector-ref-0 vector)
